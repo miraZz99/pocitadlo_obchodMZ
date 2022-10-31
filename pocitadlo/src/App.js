@@ -1,38 +1,26 @@
-import React, { useState } from "react";
+import Navbar from './Navbar';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import Pocitadlo from './Pocitadlo';
+import Obchody from './Obchody'
 
 function App() {
-  const [count, setCount] = useState(0);
   return (
-    <div className="container my-5">
-      <div className="card text-center my-5">
-        <div className="card-body">
-          <h1>Počítadlo</h1>
-          <div className="my-5">
-            <h2>{count}</h2>
-            <button
-              className="btn btn-success mx-3"
-              onClick={() => setCount(count + 1)}
-            >
-              Příchod
-            </button>
-            <button
-              className="btn btn-danger mx-3"
-              onClick={() => setCount(count - 1)}
-              disabled={count === 0}
-            >
-              Odchod
-            </button>
-            <button
-              className="btn btn-secondary mx-3"
-              onClick={() => setCount(0)}
-              disabled={count === 0}
-            >
-              Reset
-            </button>
-          </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="Content">
+          <Switch>
+            <Route exact path="/"> 
+              <Home />
+            </Route>
+            <Route path="/pocitadlo">
+              <Obchody />
+            </Route>
+          </Switch>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
