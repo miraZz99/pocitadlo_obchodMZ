@@ -19,7 +19,7 @@ const Navbar = () => {
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="/">
-              Home <span class="sr-only">(current)</span>
+              Domů
             </a>
           </li>
           <li class="nav-item">

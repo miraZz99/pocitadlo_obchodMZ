@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 
-const Pocitadlo = () => {
+const Pocitadlo = (props) => {
+  const pobchody = props.pobchody;
   const [count, setCount] = useState(0);
+
   return (
     <div className="container my-5">
       <div className="card text-center my-5">
         <div className="card-body">
-          <h1>Počítadlo</h1>
-          <div className="my-5">
+          {pobchody.map((obchod) => (
+            <div className="obchod-nazev" key={obchod.id}>
+              <h1>{obchod.title}</h1>
+              <div className="my-5">
             <h2>{count}</h2>
             <button
               className="btn btn-success mx-3"
               onClick={() => setCount(count + 1)}
+              disabled={count === obchod.limit}
             >
               Příchod
             </button>
@@ -29,11 +34,16 @@ const Pocitadlo = () => {
             >
               Reset
             </button>
+            
           </div>
+            </div>
+          ))}
+
+         
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Pocitadlo;
