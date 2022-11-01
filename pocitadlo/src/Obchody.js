@@ -17,7 +17,7 @@ const Obchody = () => {
     <div className="obchody" align="center">
       <div className="hodiny">
       <Hodiny />
-      <h3> Nyní je v obchodním centru  lidí</h3>
+      <h3>Celkový počet nakupujících</h3>
         <div className="Albert">
         <Pocitadlo pobchody={albert} />
         <Pocitadlo pobchody={zara}  />
