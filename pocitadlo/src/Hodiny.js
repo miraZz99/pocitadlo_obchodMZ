@@ -10,11 +10,10 @@ function Hodiny() {
     }, 1000);
   }, []);
 
-
   return (
-
+    
     <div style={{ fontSize: "55px", margin: "60px" }}>{hodinyState}</div>
-
+    
   );
 }
 

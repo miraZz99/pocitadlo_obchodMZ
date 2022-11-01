@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 
+
 const Pocitadlo = (props) => {
   const pobchody = props.pobchody;
   const [count, setCount] = useState(0);
+  
 
   return (
+
+    
     <div className="container my-5">
       <div className="card text-center my-5">
         <div className="card-body">
